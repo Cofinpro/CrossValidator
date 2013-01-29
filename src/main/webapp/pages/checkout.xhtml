@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:coi="http://java.sun.com/jsf/composite/cofinpro">
+<ui:composition template="/templates/cofinpro.xhtml">
+
+	<ui:define name="pageTitle">Cofinpro AG</ui:define>
+
+	<ui:define name="pageHeader">Zahlungsdaten eingeben:</ui:define>
+
+	<ui:define name="body">
+		<h:form styleClass="form">
+			<h:messages  errorClass="errorMessage"/>
+			<coi:crossvalidator validator="#{creditCardValidator.validate}" errorStyleClass="errorMessage">
+				<div style="color: red; font-weight: bold;">
+				</div>
+				<div class="row">
+					<h:outputText value="Karte" styleClass="label" />
+					<h:selectOneMenu id="cardIssuer" styleClass="field" value="#{creditCardBean.creditCard.cardType}">
+						<f:selectItems value="#{creditCardBean.acceptedCardTypes}"/>
+					</h:selectOneMenu>
+				</div>
+				<div class="row">
+					<h:outputText value="Kartennummer" styleClass="label" />
+					<h:inputText id="cardNumber" label="Kartennummer" styleClass="field" value="#{creditCardBean.creditCard.cardNumber}" required="true" requiredMessage="Bitte geben Sie Ihre Kreditkartennummer ein."/>
+				</div>
+				<div class="row">
+					<h:outputText value="gültig bis" styleClass="label" />
+					<span class="field"> <h:selectOneMenu id="validUntilMonth"
+							value="#{creditCardBean.creditCard.validUntilMonth}">
+							<f:selectItem itemValue="01" />
+							<f:selectItem itemValue="02" />
+							<f:selectItem itemValue="03" />
+							<f:selectItem itemValue="04" />
+							<f:selectItem itemValue="05" />
+							<f:selectItem itemValue="06" />
+							<f:selectItem itemValue="07" />
+							<f:selectItem itemValue="08" />
+							<f:selectItem itemValue="09" />
+							<f:selectItem itemValue="10" />
+							<f:selectItem itemValue="11" />
+							<f:selectItem itemValue="12" />
+						</h:selectOneMenu> <h:selectOneMenu id="validUntilYear" value="#{creditCardBean.creditCard.validUntilYear}">
+							<f:selectItem itemValue="2013" />
+							<f:selectItem itemValue="2014" />
+							<f:selectItem itemValue="2015" />
+							<f:selectItem itemValue="2016" />
+							<f:selectItem itemValue="2017" />
+							<f:selectItem itemValue="2018" />
+						</h:selectOneMenu> </span>
+				</div>
+			</coi:crossvalidator>
+			<div class="buttons">
+				<h:commandButton value="Weiter" action="validate" />
+			</div>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

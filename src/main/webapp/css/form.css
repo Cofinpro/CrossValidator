@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+form.form {
+	width: 250px;
+}
+
+div.row {
+	clear: both;
+	padding-top: 10px;
+}
+
+div.row span.label {
+	float: left;
+	width: 100px;
+	text-align: right;
+}
+
+div.row .field {
+	float: right;
+	text-align: left;
+}
+
+form.form div.buttons {
+	clear: both;
+	float:right;
+	padding-top: 20px;
+}
+
+.errorMessage {
+	color: red;
+}

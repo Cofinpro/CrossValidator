@@ -1,0 +1,416 @@
+::-moz-selection {
+	background: #EF7F01;
+	color: #000;
+}
+
+::selection {
+	background: #EF7F01;
+	color: #000;
+}
+
+a::-moz-selection {
+	background: #EF7F01;
+	color: #000;
+}
+
+a::selection {
+	background: #EF7F01;
+	color: #000;
+}
+
+html {
+	font: 12px/1.4 Verdana, Arial, sans-serif;
+	background: #fff;
+}
+
+html.homepage {
+	background: #ddd;
+}
+
+/* override some grid properties */
+.container-4,
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4 {
+	outline: solid 0px #f0f;
+}
+
+.padding-box {
+	padding: 5px;
+	width: 720px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+#container-nav {
+	padding-top: 0;
+}
+
+#container-content {
+	background: #fff !important;
+	padding-top: 10px;
+	
+}
+
+#container-footer {
+	background: #333 !important;
+}
+
+a {
+	text-decoration: none;
+	color: #EF7F01;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+.grid-1 p,
+.grid-2 p,
+.grid-3 p,
+.grid-4 p {
+	margin-bottom: 20px;
+}
+
+.grid-line {
+	margin-bottom: 10px;
+}
+
+.grid-line:last-child {
+	margin-bottom: 5px;
+}
+
+.grid-nav {
+	height: 180px !important;
+}
+
+.ie .grid-nav {
+	height: 190px !important;
+}
+
+.grid-line blockquote {
+	font-size: 18px;
+	margin: 10px 0;
+	color: #EF7F01;
+}
+
+.grid-image {
+	margin: 0 !important;
+}
+
+.grid-image img {
+	display: block;
+	background: #EF7F01;
+}
+
+#logo {
+	display: block;
+	background: #ef7f01;
+	padding: 40px 0 10px 30px;
+}
+
+.nav-item {
+	display: block;
+	background: #333;
+	height: 30px;
+	color: #fff;
+	padding: 70px 0 0 20px;
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	-o-transition: all 0.15s linear;
+}
+
+.nav-item:hover, .nav-item.open {
+	height: 120px;
+}
+
+.fx .nav-item:hover, .fx .nav-item.open { /* small height adjust for firefox */
+	height: 150px !important;
+}
+
+.ie .open {
+	height: 100px;
+	background: #f0f !important;
+}
+
+.nav-item a {
+	color: #fff;
+}
+
+.nav-item .subnav {
+	margin-top: 0px;
+}
+
+.nav-item p {
+	margin-bottom: 10px;
+}
+
+.ie .nav-item .subnav li { /* fix an IE display bug */
+	line-height: 0.5;
+	margin-bottom: 1px;
+}
+
+.ie .nav-item p {
+	margin-bottom: 12px;
+}
+
+.nav-item .subnav a {
+	display: block;
+	/*
+	border-bottom: solid 1px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+	padding: 4px;
+	width: 122px;
+	*/
+	padding: 3px 0;
+}
+
+.nav-item .subnav a:hover, .nav-item .subnav a.active {
+	/*
+	background: #444;
+	border-bottom: solid 1px #444;
+	*/
+	color: #ddd;
+}
+
+.portrait {
+	height: 240px;
+	background: #ddd;
+	position: relative;
+	overflow: hidden;
+}
+
+.portrait .image {
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+}
+
+.portrait .image img {
+	display: block;
+	background: #EF7F01;
+}
+
+.portrait .title {
+	position: absolute;
+	bottom: 0;
+	font-size: 11px;
+	height: 36px;
+	width: 160px;
+	overflow: ellipsis;
+	padding: 4px 0 0 10px;
+	background: #333;
+	background: rgba(30,30,30,0.9);
+	color: #fff;
+	-webkit-box-shadow: 0 -1px 0 rgba(255,255,255,0.15);
+	-webkit-box-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+	-moz-box-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+	box-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+}
+
+.grid-6 .portrait .title {
+	font-size: 14px; /* slightly larger font for the panorama pictures */
+	width: 340px;
+	line-height: 1.1;
+}
+
+.portrait .title.active {
+	background: #EF7F01 !important;
+	background: rgba(239,127,1,0.85) !important;
+	-webkit-box-shadow: 0 -1px 0 rgba(208,110,0,0.8);
+	-moz-box-shadow: 0 -1px 0 rgba(208,110,0,0.8);
+	box-shadow: 0 -1px 0 rgba(208,110,0,0.8);
+	
+}
+
+h1 {
+	font-size: 24px;
+	color: #666;
+}
+
+h2 {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+dl h2 {
+	margin-bottom: 0;
+}
+
+dl {
+	margin-bottom: 10px;
+}
+
+h3 {
+	margin-bottom: 10px;
+}
+
+.grid-legend {
+	background: #ddd;
+	padding: 8px 10px;
+	margin-bottom: 10px;
+}
+
+.grid-list {
+	margin-bottom: 20px;
+	margin-left: 16px;
+}
+
+.page-download .grid-list {
+	/* more whitespace for download lists */
+	margin-bottom: 30px;
+}
+
+.grid-list li {
+	margin-bottom: 5px;
+	list-style: square outside url('../images/list.png');
+}
+
+.grid-text, .grid-text.left {
+	padding: 0 30px 0 0;
+	margin-bottom: 10px;
+}
+
+.grid-text.question, .grid-text.headline {
+	margin-bottom: 0;
+}
+
+.grid-text.right, .grid-list.right, .right {
+	padding: 0 10px 0 10px;
+}
+
+.grid-map {
+	width: 170px;
+	height: 170px;
+	background: #666;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.grid-line .vcard {
+	font-size: 90%;
+	height: 90px; /* watch out */
+}
+
+.grid-line .vcard a {
+	color: #000;
+}
+
+.grid-line .vcard .fn {
+	font-weight: bold;
+}
+
+.grid-line .vcard .tel {
+	font-size: 90%;
+}
+
+.grid-line .vcard .geo {
+	display: none;
+}
+
+.margin-after {
+	margin-bottom: 50px;
+}
+
+.footer {
+	color: #fff;
+}
+
+.footer li {
+	margin-left: 10px;
+	margin-right: 20px;
+	display: inline;
+}
+
+.footer li a {
+	display: inline-block;
+	padding: 5px 0 0 0;
+	color: #fff;
+}
+
+#fb-like {
+	height: 21px;
+	width: 140px;
+	position: relative;
+	top: 5px;
+}
+
+/* added 25.10.10, AR */
+
+#jobs-tool {
+	width: 710px;
+	height: 1300px;
+	border: 0;
+}
+
+a[rel*="pdf"] {
+	padding-left: 12px;
+	background: url('../images/icon_download.png') 0 2px no-repeat;
+}
+
+/* added 26.10.10, AR */
+.overview-link {
+	display: inline-block;
+	margin-top: 40px;
+}
+
+/* added 27.1.11, AR */
+.past {
+	color: #bbb;
+	text-decoration: line-through;
+	list-style: none !important;
+	display: none;
+}
+
+/* added 2.2.11, AR */
+#button-login {
+	display: inline-block;
+	background: #EF7F01;
+	padding: 3px 5px;
+	color: #fff;
+}
+
+.ie #button-login {
+	position: relative;
+	top: 2px;
+}
+
+#button-login:hover {
+	background: #333;
+}
+
+/* added 30.3.11, AR: Collection Page; */
+.page-collection h3 {
+	color: #000;
+	padding-bottom: 0.2em;
+	font-weight: normal;
+	border-bottom: solid 1px #eee;
+}
+
+.page-collection h4 {
+	color: #EF7F01;
+	color: #666;
+	font-size: 80%;
+	margin-bottom: 0.4em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* hack to disable skype numbers */
+
+span.skype_pnh_container {display:none !important;}
+span.skype_pnh_print_container {display:inline !important;} 
+
+/* EOF */
+/* Localized */
